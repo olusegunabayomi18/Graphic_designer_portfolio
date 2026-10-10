@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Visuals | Creative Design. Powerful Stories.</title>
+    <meta name="description" content="Premium graphic design portfolio of Daniel Visuals. Specializing in brand identity, social media, and visual storytelling.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .accent-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        .text-accent {
+            color: #7c3aed;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        @media (max-width: 640px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #7c3aed;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden selection:bg-purple-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-lg border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-8 h-8 accent-gradient rounded-lg flex items-center justify-center font-bold text-white">D</div>
+                <span class="text-xl font-extrabold tracking-tighter">DANIEL <span class="text-purple-500">VISUALS</span></span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-10">
+                <a href="#home" class="nav-link text-sm font-medium opacity-70 hover:opacity-100">Home</a>
+                <a href="#portfolio" class="nav-link text-sm font-medium opacity-70 hover:opacity-100">Portfolio</a>
+                <a href="#about" class="nav-link text-sm font-medium opacity-70 hover:opacity-100">About</a>
+                <a href="#services" class="nav-link text-sm font-medium opacity-70 hover:opacity-100">Services</a>
+                <a href="#contact" class="px-6 py-2.5 accent-gradient rounded-full text-sm font-bold hover:shadow-[0_0_20px_rgba(124,58,237,0.4)] transition-all duration-300">Let's Work Together</a>
+            </div>
+
+            <button class="md:hidden" id="mobile-menu-btn">
+                <img src="https://api.iconify.design/material-symbols/menu.svg?color=white" class="w-8 h-8" />
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-[#0a0a0a] border-b border-white/5 px-6 py-8">
+            <div class="flex flex-col gap-6">
+                <a href="#home" class="text-lg font-bold">Home</a>
+                <a href="#portfolio" class="text-lg font-bold">Portfolio</a>
+                <a href="#about" class="text-lg font-bold">About</a>
+                <a href="#services" class="text-lg font-bold">Services</a>
+                <a href="#contact" class="text-lg font-bold text-purple-400">Let's Work Together</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-52 lg:pb-40 overflow-hidden">
+        <!-- Abstract backgrounds -->
+        <div class="absolute top-1/4 -right-20 w-96 h-96 bg-purple-600/10 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-0 -left-20 w-[500px] h-[500px] bg-blue-600/10 blur-[150px] rounded-full"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="max-w-4xl">
+                <h2 class="text-sm uppercase tracking-[0.3em] text-purple-400 font-bold mb-6 animate-pulse">Creative Design. Powerful Stories.</h2>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] mb-8 tracking-tight">
+                    Designing Visuals That Make Brands <span class="text-transparent bg-clip-text accent-gradient">Impossible to Ignore.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-white/60 mb-12 max-w-2xl font-light">
+                    I'm Daniel, a graphic designer passionate about transforming ideas into bold, memorable visual experiences.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <a href="#portfolio" class="px-10 py-5 bg-white text-black font-extrabold rounded-full hover:bg-purple-100 transition-colors inline-flex items-center justify-center gap-3">
+                        Explore My Work
+                        <img src="https://api.iconify.design/material-symbols/arrow-forward.svg" class="w-5 h-5" />
+                    </a>
+                    <a href="#contact" class="px-10 py-5 border border-white/20 font-bold rounded-full hover:bg-white/5 transition-colors inline-flex items-center justify-center">
+                        Let's Collaborate
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Mockups Decor -->
+        <div class="hidden xl:block absolute top-1/3 right-[5%] w-[400px] h-[550px] pointer-events-none">
+            <div class="relative w-full h-full animate-float">
+                <div class="absolute top-0 right-0 w-full h-full glass-card rounded-2xl overflow-hidden shadow-2xl rotate-3">
+                    <img src="https://picsum.photos/800/1000?random=1" class="w-full h-full object-cover opacity-50" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
+                </div>
+                <div class="absolute -bottom-10 -left-20 w-80 h-96 glass-card rounded-2xl overflow-hidden shadow-2xl -rotate-6">
+                    <img src="https://picsum.photos/800/1000?random=2" class="w-full h-full object-cover opacity-60" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 bg-[#0d0d0d]">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <h2 class="text-sm uppercase tracking-[0.3em] text-purple-400 font-bold mb-4 italic">Showcase</h2>
+                    <h3 class="text-4xl md:text-5xl font-black">Featured Projects</h3>
+                </div>
+                <p class="text-white/40 max-w-sm">
+                    A selection of creative explorations and visual narratives crafted for diverse digital needs.
+                </p>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Project Card 1 -->
+                <div class="group relative glass-card rounded-3xl overflow-hidden hover-lift cursor-pointer" onclick="openModal('Brand Identity', 'Lumina Tech Rebrand', 'A complete overhaul of a silicon valley startup visual language.', 3)">
+                    <div class="aspect-[4/5] overflow-hidden">
+                        <img src="https://picsum.photos/800/1000?random=10" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Project Preview" />
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-purple-400 text-xs font-bold uppercase tracking-widest mb-2">Brand Identity</span>
+                        <h4 class="text-2xl font-bold mb-4">Lumina Tech Rebrand</h4>
+                        <div class="w-10 h-10 accent-gradient rounded-full flex items-center justify-center">
+                            <img src="https://api.iconify.design/material-symbols/add.svg?color=white" class="w-6 h-6" />
+                        </div>
+                    </div>
+                    <div class="absolute top-6 left-6">
+                        <span class="px-3 py-1 bg-black/50 backdrop-blur-md rounded-full text-[10px] uppercase font-bold tracking-tighter">Client Sample</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="group relative glass-card rounded-3xl overflow-hidden hover-lift cursor-pointer" onclick="openModal('Album Art', 'Midnight Echoes', 'Cover design for an indie electronic artist featuring dark noir aesthetics.', 4)">
+                    <div class="aspect-[4/5] overflow-hidden">
+                        <img src="https://picsum.photos/800/1000?random=11" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Project Preview" />
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-purple-400 text-xs font-bold uppercase tracking-widest mb-2">Album Art</span>
+                        <h4 class="text-2xl font-bold mb-4">Midnight Echoes</h4>
+                        <div class="w-10 h-10 accent-gradient rounded-full flex items-center justify-center">
+                            <img src="https://api.iconify.design/material-symbols/add.svg?color=white" class="w-6 h-6" />
+                        </div>
+                    </div>
+                    <div class="absolute top-6 left-6">
+                        <span class="px-3 py-1 bg-black/50 backdrop-blur-md rounded-full text-[10px] uppercase font-bold tracking-tighter">Personal Project</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="group relative glass-card rounded-3xl overflow-hidden hover-lift cursor-pointer" onclick="openModal('Social Media', 'Hype Sneakers Campaign', 'High-energy visuals for a footwear drop on Instagram.', 5)">
+                    <div class="aspect-[4/5] overflow-hidden">
+                        <img src="https://picsum.photos/800/1000?random=12" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Project Preview" />
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-purple-400 text-xs font-bold uppercase tracking-widest mb-2">Social Media</span>
+                        <h4 class="text-2xl font-bold mb-4">Hype Sneakers Campaign</h4>
+                        <div class="w-10 h-10 accent-gradient rounded-full flex items-center justify-center">
+                            <img src="https://api.iconify.design/material-symbols/add.svg?color=white" class="w-6 h-6" />
+                        </div>
+                    </div>
+                    <div class="absolute top-6 left-6">
+                        <span class="px-3 py-1 bg-black/50 backdrop-blur-md rounded-full text-[10px] uppercase font-bold tracking-tighter">Client Sample</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="group relative glass-card rounded-3xl overflow-hidden hover-lift cursor-pointer" onclick="openModal('Typography', 'Experimental Shapes', 'A study in grid systems and distorted serif typography.', 15)">
+                    <div class="aspect-[4/5] overflow-hidden">
+                        <img src="https://picsum.photos/800/1000?random=13" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Project Preview" />
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-purple-400 text-xs font-bold uppercase tracking-widest mb-2">Typography</span>
+                        <h4 class="text-2xl font-bold mb-4">Experimental Shapes</h4>
+                        <div class="w-10 h-10 accent-gradient rounded-full flex items-center justify-center">
+                            <img src="https://api.iconify.design/material-symbols/add.svg?color=white" class="w-6 h-6" />
+                        </div>
+                    </div>
+                    <div class="absolute top-6 left-6">
+                        <span class="px-3 py-1 bg-black/50 backdrop-blur-md rounded-full text-[10px] uppercase font-bold tracking-tighter">Exploration</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <button class="px-12 py-5 border border-white/10 rounded-full hover:bg-white/5 transition-all text-sm font-bold tracking-widest uppercase">View All Work</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="relative">
+                    <div class="aspect-square rounded-3xl overflow-hidden relative z-10">
+                        <img src="https://picsum.photos/800/800?random=20" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Daniel's Portrait" />
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-64 h-64 accent-gradient rounded-full blur-[80px] opacity-30"></div>
+                    <div class="absolute -top-10 -left-10 w-full h-full border border-white/5 rounded-3xl"></div>
+                </div>
+                
+                <div>
+                    <h2 class="text-sm uppercase tracking-[0.3em] text-purple-400 font-bold mb-6">The Creative Mind</h2>
+                    <h3 class="text-4xl md:text-5xl lg:text-6xl font-black mb-8 leading-tight">Behind the <br/><span class="text-white/40">Designs.</span></h3>
+                    <p class="text-white/60 text-lg mb-10 leading-relaxed">
+                        I'm a visual storyteller dedicated to building brands that resonate. For me, design isn't just about making things look good; it's about solving problems and creating an emotional connection between a brand and its audience.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-8 mb-12">
+                        <div>
+                            <h4 class="text-white font-bold mb-2">Creativity</h4>
+                            <p class="text-white/40 text-sm">Bold ideas that break through the digital noise.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-2">Attention to Detail</h4>
+                            <p class="text-white/40 text-sm">Precision in every pixel, from kerning to color.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-2">Storytelling</h4>
+                            <p class="text-white/40 text-sm">Visuals that convey a message without words.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-2">Consistency</h4>
+                            <p class="text-white/40 text-sm">Uniform brand experiences across all platforms.</p>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="inline-block px-8 py-4 accent-gradient rounded-full font-bold shadow-lg shadow-purple-900/20">Learn My Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-[#0d0d0d]">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-20">
+                <h2 class="text-sm uppercase tracking-[0.3em] text-purple-400 font-bold mb-4">Expertise</h2>
+                <h3 class="text-4xl md:text-5xl font-black">Professional Services</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="p-10 glass-card rounded-3xl hover-lift">
+                    <img src="https://api.iconify.design/material-symbols/pentagon.svg?color=%237c3aed" class="w-12 h-12 mb-8" />
+                    <h4 class="text-2xl font-bold mb-4">Logo Design</h4>
+                    <p class="text-white/50 mb-8">Crafting unique and timeless symbols that represent the core of your brand's identity.</p>
+                    <a href="#contact" class="text-sm font-bold text-purple-400 flex items-center gap-2 group">Request a Design <img src="https://api.iconify.design/material-symbols/chevron-right.svg?color=%237c3aed" class="w-4 h-4 transition-transform group-hover:translate-x-1" /></a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="p-10 glass-card rounded-3xl hover-lift">
+                    <img src="https://api.iconify.design/material-symbols/auto-awesome.svg?color=%237c3aed" class="w-12 h-12 mb-8" />
+                    <h4 class="text-2xl font-bold mb-4">Brand Identity</h4>
+                    <p class="text-white/50 mb-8">Comprehensive visual systems including typography, color palettes, and brand guidelines.</p>
+                    <a href="#contact" class="text-sm font-bold text-purple-400 flex items-center gap-2 group">Request a Design <img src="https://api.iconify.design/material-symbols/chevron-right.svg?color=%237c3aed" class="w-4 h-4 transition-transform group-hover:translate-x-1" /></a>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="p-10 glass-card rounded-3xl hover-lift">
+                    <img src="https://api.iconify.design/fa6-brands/instagram.svg?color=%237c3aed" class="w-12 h-12 mb-8" />
+                    <h4 class="text-2xl font-bold mb-4">Social Media</h4>
+                    <p class="text-white/50 mb-8">Eye-catching graphics and templates tailored for Instagram, Twitter, and Facebook.</p>
+                    <a href="#contact" class="text-sm font-bold text-purple-400 flex items-center gap-2 group">Request a Design <img src="https://api.iconify.design/material-symbols/chevron-right.svg?color=%237c3aed" class="w-4 h-4 transition-transform group-hover:translate-x-1" /></a>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="p-10 glass-card rounded-3xl hover-lift">
+                    <img src="https://api.iconify.design/material-symbols/shopping-bag.svg?color=%237c3aed" class="w-12 h-12 mb-8" />
+                    <h4 class="text-2xl font-bold mb-4">Promo Graphics</h4>
+                    <p class="text-white/50 mb-8">Flyers, posters, and digital ads that drive conversions and capture attention instantly.</p>
+                    <a href="#contact" class="text-sm font-bold text-purple-400 flex items-center gap-2 group">Request a Design <img src="https://api.iconify.design/material-symbols/chevron-right.svg?color=%237c3aed" class="w-4 h-4 transition-transform group-hover:translate-x-1" /></a>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="p-10 glass-card rounded-3xl hover-lift">
+                    <img src="https://api.iconify.design/fa6-brands/youtube.svg?color=%237c3aed" class="w-12 h-12 mb-8" />
+                    <h4 class="text-2xl font-bold mb-4">YouTube Thumbnails</h4>
+                    <p class="text-white/50 mb-8">High-CTR thumbnails designed to maximize your video reach and channel growth.</p>
+                    <a href="#contact" class="text-sm font-bold text-purple-400 flex items-center gap-2 group">Request a Design <img src="https://api.iconify.design/material-symbols/chevron-right.svg?color=%237c3aed" class="w-4 h-4 transition-transform group-hover:translate-x-1" /></a>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="p-10 glass-card rounded-3xl hover-lift">
+                    <img src="https://api.iconify.design/material-symbols/ads-click.svg?color=%237c3aed" class="w-12 h-12 mb-8" />
+                    <h4 class="text-2xl font-bold mb-4">Ad Creatives</h4>
+                    <p class="text-white/50 mb-8">Professional advertising visuals for Google, Meta, and LinkedIn marketing campaigns.</p>
+                    <a href="#contact" class="text-sm font-bold text-purple-400 flex items-center gap-2 group">Request a Design <img src="https://api.iconify.design/material-symbols/chevron-right.svg?color=%237c3aed" class="w-4 h-4 transition-transform group-hover:translate-x-1" /></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="mb-20">
+                <h2 class="text-sm uppercase tracking-[0.3em] text-purple-400 font-bold mb-4">Workflow</h2>
+                <h3 class="text-4xl md:text-5xl font-black">How We Create Magic</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+                <!-- Connecting Line -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-white/10 -translate-y-1/2"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 group">
+                    <div class="w-16 h-16 rounded-full bg-[#0a0a0a] border border-white/10 flex items-center justify-center font-black text-2xl mb-8 group-hover:border-purple-500 group-hover:text-purple-500 transition-all">01</div>
+                    <h4 class="text-xl font-bold mb-3">Discover</h4>
+                    <p class="text-white/40 text-sm leading-relaxed">Understanding your goals, audience, and the problem we're solving.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 group">
+                    <div class="w-16 h-16 rounded-full bg-[#0a0a0a] border border-white/10 flex items-center justify-center font-black text-2xl mb-8 group-hover:border-purple-500 group-hover:text-purple-500 transition-all">02</div>
+                    <h4 class="text-xl font-bold mb-3">Plan</h4>
+                    <p class="text-white/40 text-sm leading-relaxed">Moodboarding and conceptualizing the visual direction and strategy.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 group">
+                    <div class="w-16 h-16 rounded-full bg-[#0a0a0a] border border-white/10 flex items-center justify-center font-black text-2xl mb-8 group-hover:border-purple-500 group-hover:text-purple-500 transition-all">03</div>
+                    <h4 class="text-xl font-bold mb-3">Design</h4>
+                    <p class="text-white/40 text-sm leading-relaxed">Crafting the high-fidelity visuals with precision and creativity.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative z-10 group">
+                    <div class="w-16 h-16 rounded-full bg-[#0a0a0a] border border-white/10 flex items-center justify-center font-black text-2xl mb-8 group-hover:border-purple-500 group-hover:text-purple-500 transition-all">04</div>
+                    <h4 class="text-xl font-bold mb-3">Deliver</h4>
+                    <p class="text-white/40 text-sm leading-relaxed">Presenting and refining the final assets for production launch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-[#0d0d0d] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-sm uppercase tracking-[0.3em] text-purple-400 font-bold mb-4">Trust</h2>
+                <h3 class="text-4xl font-black">Client Feedback</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-12 glass-card rounded-3xl border-l-4 border-purple-500">
+                    <p class="text-xl italic text-white/70 mb-8">"[Authentic client feedback placeholder. Daniel's exceptional design sense transformed our brand perception within weeks.]"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-white/10"></div>
+                        <div>
+                            <p class="font-bold">[Client Name]</p>
+                            <p class="text-xs text-white/30">[Position / Company]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-12 glass-card rounded-3xl border-l-4 border-purple-500">
+                    <p class="text-xl italic text-white/70 mb-8">"[Placeholder for future client success story. The attention to detail in the logo and identity system was world-class.]"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-white/10"></div>
+                        <div>
+                            <p class="font-bold">[Client Name]</p>
+                            <p class="text-xs text-white/30">[Position / Company]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
+            <div class="w-[800px] h-[800px] bg-purple-600/5 blur-[120px] rounded-full mx-auto"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-20">
+                <div>
+                    <h2 class="text-sm uppercase tracking-[0.3em] text-purple-400 font-bold mb-6 italic">Get in Touch</h2>
+                    <h3 class="text-5xl md:text-7xl font-black mb-8 leading-tight">Have a Project <br/><span class="text-white/40">in Mind?</span></h3>
+                    <p class="text-white/60 text-xl mb-12">
+                        Let's turn your ideas into visuals that stand out. Tell me about your project, and let's create something remarkable.
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <a href="mailto:hello@danielvisuals.com" class="flex items-center gap-6 group">
+                            <div class="w-14 h-14 glass-card rounded-2xl flex items-center justify-center group-hover:bg-purple-600/20 transition-all">
+                                <img src="https://api.iconify.design/material-symbols/mail.svg?color=white" class="w-6 h-6" />
+                            </div>
+                            <div>
+                                <p class="text-xs text-white/30 uppercase tracking-widest">Email Me</p>
+                                <p class="text-lg font-bold">hello@danielvisuals.com</p>
+                            </div>
+                        </a>
+                        <div class="flex gap-4 pt-4">
+                            <a href="#" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-purple-600 transition-all"><img src="https://api.iconify.design/fa6-brands/instagram.svg?color=white" class="w-5 h-5" /></a>
+                            <a href="#" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-purple-600 transition-all"><img src="https://api.iconify.design/fa6-brands/behance.svg?color=white" class="w-5 h-5" /></a>
+                            <a href="#" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-purple-600 transition-all"><img src="https://api.iconify.design/fa6-brands/whatsapp.svg?color=white" class="w-5 h-5" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-10 rounded-[40px] shadow-2xl">
+                    <form id="contact-form" onsubmit="handleSubmit(event)" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-widest text-white/50">Your Name</label>
+                                <input type="text" required placeholder="John Doe" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-purple-500 transition-all">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-widest text-white/50">Email Address</label>
+                                <input type="email" required placeholder="john@example.com" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-purple-500 transition-all">
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-widest text-white/50">Project Type</label>
+                                <select class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-purple-500 transition-all appearance-none">
+                                    <option class="bg-[#0a0a0a]">Logo Design</option>
+                                    <option class="bg-[#0a0a0a]">Brand Identity</option>
+                                    <option class="bg-[#0a0a0a]">Social Media</option>
+                                    <option class="bg-[#0a0a0a]">Other</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-widest text-white/50">Budget Range</label>
+                                <select class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-purple-500 transition-all appearance-none">
+                                    <option class="bg-[#0a0a0a]">$500 - $1000</option>
+                                    <option class="bg-[#0a0a0a]">$1000 - $5000</option>
+                                    <option class="bg-[#0a0a0a]">$5000+</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-widest text-white/50">Project Description</label>
+                            <textarea rows="4" required placeholder="Tell me about your vision..." class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-purple-500 transition-all"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-5 accent-gradient rounded-2xl font-black text-lg hover:shadow-[0_0_30px_rgba(124,58,237,0.3)] transition-all">
+                            Send Project Inquiry
+                        </button>
+                        <p id="form-status" class="text-center text-sm font-medium hidden"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col items-center md:items-start">
+                <a href="#" class="flex items-center gap-2 mb-4">
+                    <div class="w-6 h-6 accent-gradient rounded-md flex items-center justify-center text-xs font-bold">D</div>
+                    <span class="text-lg font-extrabold tracking-tighter">DANIEL <span class="text-purple-500">VISUALS</span></span>
+                </a>
+                <p class="text-white/30 text-sm">Daniel Visuals &copy; 2026. Designed with creativity.</p>
+            </div>
+
+            <div class="flex gap-10">
+                <a href="#portfolio" class="text-sm text-white/50 hover:text-white">Work</a>
+                <a href="#about" class="text-sm text-white/50 hover:text-white">Studio</a>
+                <a href="#services" class="text-sm text-white/50 hover:text-white">Services</a>
+                <a href="#contact" class="text-sm text-white/50 hover:text-white">Contact</a>
+            </div>
+
+            <div class="flex gap-4">
+                <img src="https://api.iconify.design/fa6-brands/instagram.svg?color=gray" class="w-5 h-5" />
+                <img src="https://api.iconify.design/fa6-brands/behance.svg?color=gray" class="w-5 h-5" />
+                <img src="https://api.iconify.design/fa6-brands/dribbble.svg?color=gray" class="w-5 h-5" />
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-xl" onclick="closeModal()"></div>
+        <div class="relative bg-[#111] max-w-4xl w-full rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh]">
+            <button class="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center" onclick="closeModal()">
+                <img src="https://api.iconify.design/material-symbols/close.svg?color=white" class="w-6 h-6" />
+            </button>
+            <div class="md:w-1/2 overflow-hidden">
+                <img id="modal-img" src="" class="w-full h-full object-cover" />
+            </div>
+            <div class="md:w-1/2 p-10 flex flex-col justify-center overflow-y-auto">
+                <span id="modal-cat" class="text-purple-400 text-xs font-bold uppercase tracking-widest mb-4">Category</span>
+                <h4 id="modal-title" class="text-3xl font-black mb-6">Project Title</h4>
+                <p id="modal-desc" class="text-white/60 text-lg mb-8 leading-relaxed">Detailed project description goes here...</p>
+                <div class="space-y-4">
+                    <div class="flex gap-2">
+                        <div class="w-full h-24 bg-white/5 rounded-xl animate-pulse"></div>
+                        <div class="w-full h-24 bg-white/5 rounded-xl animate-pulse"></div>
+                    </div>
+                    <a href="#contact" onclick="closeModal()" class="block text-center py-4 accent-gradient rounded-xl font-bold">Inquire About Similar Work</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        var menuBtn = document.getElementById('mobile-menu-btn');
+        var mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Modal Logic
+        function openModal(cat, title, desc, imgId) {
+            document.getElementById('modal-cat').innerText = cat;
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('modal-img').src = 'https://picsum.photos/800/1000?random=' + imgId;
+            document.getElementById('project-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('project-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Form Submission
+        function handleSubmit(e) {
+            e.preventDefault();
+            var status = document.getElementById('form-status');
+            status.innerText = "Sending your message...";
+            status.classList.remove('hidden');
+            status.classList.add('text-purple-400');
+            
+            setTimeout(function() {
+                status.innerText = "Message sent successfully! Daniel will contact you soon.";
+                status.classList.remove('text-purple-400');
+                status.classList.add('text-green-400');
+                document.getElementById('contact-form').reset();
+            }, 1500);
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            var nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-[#0a0a0a]/95');
+            } else {
+                nav.classList.remove('bg-[#0a0a0a]/95');
+            }
+        });
+
+        // Animation triggers
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0');
+                    entry.target.classList.add('translate-y-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</body>
+</html>
